@@ -117,10 +117,26 @@ python -m pytest -q
 See `docs/validation.md` for performed checks and remaining release requirements. This is an integration candidate, not a scientifically validated final release. Author attribution, redistribution permissions for trained projects and the public code license must be settled before publication.
 
 
-## Projection-aware spatial analysis
 
-New strict/extended nuclear-distance measurements and optional geometric Monte Carlo models are described in [SPATIAL_ANALYSIS_METHODS_UPDATE.md](SPATIAL_ANALYSIS_METHODS_UPDATE.md). Use RUN_SPATIAL.bat for read-only reanalysis of final HDF5 files. Old spatial fields are preserved and have different primary-only exclusion semantics.
+## Nucleus-Centered Spatial Analysis
 
-## Public release status
+GranuSCAPE provides single-cell spatial profiling of G3BP- and eIF3η-positive fluorescent puncta relative to soma boundaries and assigned primary nuclei.
 
-This repository snapshot is version `0.1.0rc5`. For licensing, trained-model redistribution and release validation requirements, see [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md). The bundled example configuration contains workstation-specific example backend paths and must be adapted before running.
+The spatial analysis includes radial and angular fluorescence distributions, strict perinuclear and distal coverage measurements, and extended nucleus-associated measurements that account for fluorescence overlapping the two-dimensional nuclear projection.
+
+Optional geometry-constrained Monte Carlo analysis evaluates observed spatial patterns against cell-specific random-placement models. Whole-object simulations preserve the segmented shapes and sizes of puncta while respecting the permissible cellular geometry.
+
+Spatial analysis can be performed on previously generated HDF5 files using `RUN_SPATIAL.bat`, without repeating the initial image segmentation. Legacy spatial measurements are retained for compatibility and may differ in their nuclear-exclusion conventions.
+
+## Software Version and Availability
+
+The current GranuSCAPE version is `0.1.0rc5`.
+
+The repository includes the Python source code, segmentation workflows, trained ilastik projects, example configurations, automated tests, and documentation.
+
+GranuSCAPE is distributed under the BSD 3-Clause License. See [LICENSE](LICENSE) for the applicable terms.
+
+The software was developed at the Institute of Cytology and Genetics, Siberian Branch of the Russian Academy of Sciences, with support from the Russian Science Foundation (grant No. 26-24-20045).
+
+The example configurations may require adjustments to local software installation paths and computational environments.
+
