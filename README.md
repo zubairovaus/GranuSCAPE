@@ -118,13 +118,14 @@ See `docs/validation.md` for performed checks and remaining release requirements
 
 
 
+
 ## Nucleus-Centered Spatial Analysis
 
-GranuSCAPE provides single-cell spatial profiling of G3BP- and eIF3η-positive fluorescent puncta relative to soma boundaries and assigned primary nuclei.
+GranuSCAPE provides single-cell spatial profiling of G3BP- and eIF3η-positive fluorescent puncta relative to refined somatic boundaries and assigned primary nuclei.
 
-The spatial analysis includes radial and angular fluorescence distributions, strict perinuclear and distal coverage measurements, and extended nucleus-associated measurements that account for fluorescence overlapping the two-dimensional nuclear projection.
+The spatial analysis includes radial and angular fluorescence distributions, strict perinuclear and distal coverage measurements, and extended nucleus-associated measurements accounting for fluorescence overlapping the two-dimensional projection of the primary nucleus.
 
-Optional geometry-constrained Monte Carlo analysis evaluates observed spatial patterns against cell-specific random-placement models. Whole-object simulations preserve the segmented shapes and sizes of puncta while respecting the permissible cellular geometry.
+Optional geometry-constrained Monte Carlo analysis evaluates observed punctum distributions against cell-specific spatial null models. Whole-object simulations preserve the number, shapes, sizes, and orientations of segmented puncta while randomizing their positions within geometrically permissible cellular domains.
 
 Spatial analysis can be performed on previously generated HDF5 files using `RUN_SPATIAL.bat`, without repeating the initial image segmentation. Legacy spatial measurements are retained for compatibility and may differ in their nuclear-exclusion conventions.
 
@@ -132,11 +133,19 @@ Spatial analysis can be performed on previously generated HDF5 files using `RUN_
 
 The current GranuSCAPE version is `0.1.0rc5`.
 
-The repository includes the Python source code, segmentation workflows, trained ilastik projects, example configurations, automated tests, and documentation.
+The repository contains the Python source code, segmentation workflows, trained ilastik projects, example configurations, automated tests, and documentation.
 
 GranuSCAPE is distributed under the BSD 3-Clause License. See [LICENSE](LICENSE) for the applicable terms.
 
-The software was developed at the Institute of Cytology and Genetics, Siberian Branch of the Russian Academy of Sciences, with support from the Russian Science Foundation (grant No. 26-24-20045).
+Example configurations may require adjustment to local software installation paths and computational environments.
 
-The example configurations may require adjustments to local software installation paths and computational environments.
+## Authorship and Affiliation
+
+**Software author and developer:** Ulyana S. Zubairova
+
+**Institution:** Federal Research Center Institute of Cytology and Genetics, Siberian Branch of the Russian Academy of Sciences (ICG SB RAS).
+
+## Funding
+
+The development of GranuSCAPE was supported by the Russian Science Foundation (RSF), grant No. 26-24-20045 ([project information](https://rscf.ru/project/26-24-20045/)), and by a grant from the Government of the Novosibirsk Region (Agreement No. 30-2026-001282).
 
