@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="branding/granuscape-logo.svg"
+  <img src="branding/granuscape-logo.png"
        alt="GranuSCAPE — Spatial Cellular Analysis and Puncta Exploration"
        width="700">
 </p>
