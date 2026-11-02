@@ -87,6 +87,8 @@ Object tables retain unassigned and outside-MCL objects for audit. Regional obje
 
 ## Review and scope
 
+A cell is eligible for quantitative analysis only when all three criteria are satisfied simultaneously: `analysis_ROI_fraction >= 0.1`, `touches_frame == False`, and `measurement_valid == True`. In addition, the image must pass visual expert review. Meeting these criteria does not automatically imply expert acceptance.
+
 Results have status `complete_requires_review`. Review the MCL and numbered soma overlays before quantitative use. Nuclear-dominated masks are flagged conservatively when nuclear area occupies at least 80% of the soma. This new diagnostic is a review trigger, **not a validated quality classifier**. Undefined spatial measures are missing, never filled with zero; zero-puncta cells remain in the tables.
 
 Every existing soma seed is evaluated for refinement, regardless of size, morphotype, preliminary contrast or MCL membership. Frame-truncated cells remain excluded. There is no 45 µm² area cutoff or 20-pixel cytoplasm gate in contour refinement. A nonempty extranuclear seed sample and an adequate local background are still necessary; the signal sample size is exported. The area criterion for anatomical soma support is a separate MCL-fitting rule, not a contour-refinement gate.
