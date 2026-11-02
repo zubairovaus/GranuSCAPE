@@ -129,6 +129,18 @@ Optional geometry-constrained Monte Carlo analysis evaluates observed punctum di
 
 Spatial analysis can be performed on previously generated HDF5 files using `RUN_SPATIAL.bat`, without repeating the initial image segmentation. Legacy spatial measurements are retained for compatibility and may differ in their nuclear-exclusion conventions.
 
+
+## Real-Image Example
+
+A representative mouse olfactory bulb fluorescence image
+(`Snap-54570.czi`) and its corresponding HDF5 analysis
+results and quality-control outputs are provided in the
+[real-image demonstration dataset](examples/real_data/Snap-54570/).
+
+The example enables inspection of GranuSCAPE outputs and
+provides input data for independent testing of the pipeline.
+
+
 ## Software Version and Availability
 
 The current GranuSCAPE version is `0.1.0rc5`.
