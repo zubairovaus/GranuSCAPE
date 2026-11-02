@@ -1,3 +1,10 @@
+
+<p align="center">
+  <img src="branding/granuscape-logo.svg"
+       alt="GranuSCAPE — Spatial Cellular Analysis and Puncta Exploration"
+       width="700">
+</p>
+
 # GranuScape
 
 **Layer-aware cellular morphometry and spatial profiling of fluorescent granules.**
