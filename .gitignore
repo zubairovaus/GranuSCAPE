@@ -1,0 +1,33 @@
+# Local environments, build and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# User-specific configuration and data
+/test.yaml
+/local.yaml
+/config.local.yaml
+/data/
+/results/
+/outputs/
+*.czi
+*.h5
+*.hdf5
+*.log
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
