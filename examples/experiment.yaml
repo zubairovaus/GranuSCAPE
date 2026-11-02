@@ -1,0 +1,28 @@
+input: ./data
+output: ./results
+channels:
+  dapi: DAPI
+  af488: AF488
+  rhoda: Rhoda
+backends:
+  cellpose_python: 'D:\cellpose_env\Scripts\python.exe'
+  cellpose_model: cpsam_v2
+  ilastik: 'C:\Program Files\ilastik-1.4.2\ilastik.exe'
+  ilastik_python: 'C:\Program Files\ilastik-1.4.2\python.exe'
+gpu: true
+keep_work: false
+density_sigma_um: 12
+# Optional metadata CSV, one row per CZI stem:
+# metadata_csv: ./images.csv
+experiment:
+  name: example_experiment
+qc:
+  views: [A, B, C, D]
+  include_cell_ids: true
+  normalization: clahe
+  background_brightness: 0.38
+  clahe_kernel_px: [128, 128]
+  clahe_clip_limit: 0.005
+  clahe_gamma: 1.3
+  mcl_color: '#C86F80'
+  mcl_line_width_px: 3

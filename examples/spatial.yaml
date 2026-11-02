@@ -1,0 +1,9 @@
+spatial:
+  perinuclear_radius_um: 2.0
+  monte_carlo: true
+  simulations: 1000
+  seed: 17
+  modes: [full_mask, centroid_only]
+  max_candidates: 200000
+  diagnostics: true
+  diagnostic_cells: 3

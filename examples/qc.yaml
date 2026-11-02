@@ -1,0 +1,7 @@
+# Can be used with `granuscape qc` without CZI files or inference backends.
+qc:
+  views: [A, B, C, D]
+  include_cell_ids: true
+  normalization: clahe
+  mcl_color: '#C86F80'
+  mcl_line_width_px: 3
